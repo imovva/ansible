@@ -2,7 +2,7 @@
   hosts: web
   tasks:
   - name: ping the web server
-    ansible.buitlin.ping:
+    ansible.builtin.ping:
   tasks:
   - name: print the msg
     ansible.builtin.debug:
