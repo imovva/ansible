@@ -5,6 +5,6 @@
     ansible.buitlin.ping:
   tasks:
   - name: print the msg
-    ansible.buitlin.debug:
+    ansible.builtin.debug:
       msg: "hello world"
 
