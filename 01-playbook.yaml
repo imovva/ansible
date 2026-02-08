@@ -3,4 +3,7 @@
   tasks:
   - name: ping the web server
     ansible.buitlin.ping:
-   
+  tasks:
+  - name: print the msg
+    ansible.buitlin.debug:
+    msg: "hello world"
