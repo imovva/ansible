@@ -1,0 +1,25 @@
+- name: print variables from user prompt and from a file
+  host: local
+  connection: local
+  vars_files:
+   - course.yaml
+
+  vars_prompt:
+  - name: user
+    prompt: please enter your name
+    private: false
+  
+  - name: password
+    prompt: please enter your password
+    privete: false
+
+
+  tasks:
+  - name: print vars from a file 
+    ansible.builtin.debug:
+    msg: "these are variables from coursre.yaml file {{DURATION}},{{LOCATION}},{{LOCATION}}"
+
+  - name: print user prompt vars
+    ansible.builtin.debug:
+    msg: "username from prompt is {{user}},password is {{password}}"
+

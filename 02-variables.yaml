@@ -10,3 +10,10 @@
   - name: print variables
     ansible.builtin.debug:
       msg: "Course is {{COURSE}}, duration is {{DURATION}}"
+
+  tasks:
+  - name: print task level variables
+    vars:
+    LOCATION: "oshawa"
+    ansible.builtin.debug:
+     msg: "Location is {{LOCATION}}"
